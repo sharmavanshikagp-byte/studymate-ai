@@ -26,7 +26,7 @@ st.set_page_config(
 # SETTINGS
 # ============================================================
 
-MODEL_NAME = "llama-3.1-8b-instant"
+MODEL_NAME = "openai/gpt-oss-20b"
 MAX_TEXT_LENGTH = 18000
 
 
