@@ -6,7 +6,7 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 import io
 import json
 import re
-import ollama
+from groq import Groq
 from datetime import datetime
 
 
@@ -26,7 +26,7 @@ st.set_page_config(
 # SETTINGS
 # ============================================================
 
-MODEL_NAME = "gemma4:e2b"
+MODEL_NAME = "llama-3.1-8b-instant"
 MAX_TEXT_LENGTH = 18000
 
 
@@ -580,59 +580,29 @@ def ask_ai(prompt):
 
     try:
 
-        response = ollama.generate(
-            model=MODEL_NAME,
-            prompt=prompt,
-            think=False
+        client = Groq(
+            api_key=st.secrets["GROQ_API_KEY"]
         )
 
-        content = ""
+        response = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=0.2,
+            max_tokens=4096
+        )
 
-        if hasattr(response, "response"):
-            content = response.response or ""
-
-        elif isinstance(response, dict):
-            content = response.get(
-                "response",
-                ""
-            ) or ""
-
-        content = str(content).strip()
+        content = response.choices[0].message.content
 
         if not content:
-
-            st.error(
-                "⚠️ Ollama did not return a final answer."
-            )
-
+            st.error("⚠️ Groq did not return an answer.")
             return ""
 
-        # Remove common reasoning sections
-        patterns = [
-            r"(?is)^.*?Thinking Process:.*?(?=Final Answer:|Final output:)",
-            r"(?is)^.*?Thought Process:.*?(?=Final Answer:|Final output:)",
-            r"(?is)^.*?Reasoning:.*?(?=Final Answer:|Final output:)",
-            r"(?is)^.*?Let's think.*?(?=Final Answer:|Final output:)"
-        ]
-
-        for pattern in patterns:
-
-            cleaned = re.sub(
-                pattern,
-                "",
-                content
-            )
-
-            if cleaned.strip():
-
-                content = cleaned.strip()
-
-        content = re.sub(
-            r"^\s*(Final Answer|Final output)\s*:\s*",
-            "",
-            content,
-            flags=re.IGNORECASE
-        ).strip()
+        content = str(content).strip()
 
         return content
 
@@ -643,8 +613,7 @@ def ask_ai(prompt):
         )
 
         st.info(
-            "Make sure Ollama is running and "
-            f"the model '{MODEL_NAME}' is installed."
+            "Please check your Groq API key and Streamlit Secrets."
         )
 
         return ""
