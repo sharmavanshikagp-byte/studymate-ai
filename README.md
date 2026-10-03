@@ -1,4 +1,9 @@
 # 📚 StudyMate AI
+### 🌐 Live Demo
+
+👉 **[Try StudyMate AI](https://studymate-ai-ses2rxzrx69miqtjwubtpz.streamlit.app)**
+
+> Upload your study material, generate summaries, ask questions, create exam questions, and test yourself with AI-powered quizzes.
 
 > Your smart little study companion ✨
 
