@@ -3,4 +3,4 @@ pypdf
 pymupdf
 pytesseract
 Pillow
-ollama
+groq
