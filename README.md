@@ -61,8 +61,35 @@ The application is designed to keep study material processing local rather than 
 
 ## 🚀 Run Locally
 
+
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/sharmavanshikagp-byte/studymate-ai.git
 cd studymate-ai
+## 📸 Screenshots
+
+### 🏠 Home
+The StudyMate AI dashboard provides access to all major study features, including smart summaries, note-based Q&A, exam questions, and quizzes.
+
+![StudyMate AI Home](screenshots/home.png)
+
+### ✨ Smart Summary
+Converts lengthy study material into structured, simplified, and exam-ready notes.
+
+![Smart Summary](screenshots/smart-summary.png)
+
+### 💬 Ask My Notes
+Allows students to ask questions directly from their uploaded study material and receive AI-generated answers.
+
+![Ask My Notes](screenshots/ask-my-notes.png)
+
+### ❓ Exam Question Generator
+Generates university-style questions from uploaded notes based on the selected question type and number of questions.
+
+![Exam Question Generator](screenshots/exam-questions.png)
+
+### 🎯 Quiz Mode
+Creates AI-generated MCQs and provides scores, answer reviews, and explanations.
+
+![Quiz Mode](screenshots/quiz-mode.png)
