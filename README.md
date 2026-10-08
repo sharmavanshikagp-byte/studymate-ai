@@ -1,4 +1,5 @@
 # 📚 StudyMate AI
+
 ### 🌐 Live Demo
 
 👉 **[Try StudyMate AI](https://studymate-ai-ses2rxzrx69miqtjwubtpz.streamlit.app)**
@@ -6,31 +7,22 @@
 > Upload your study material, generate summaries, ask questions, create exam questions, and test yourself with AI-powered quizzes.
 
 > Your smart little study companion ✨
+
 ## 🌸 About the Project
 
-StudyMate AI is a personal AI-powered study assistant designed to help
-students turn lengthy study material into simple, structured and
-exam-ready learning resources.
+StudyMate AI is a personal AI-powered study assistant designed to help students turn lengthy study material into simple, structured, and exam-ready learning resources.
 
-The application allows students to upload PDF notes, generate
-AI-powered summaries, ask questions directly from their material,
-create exam-oriented questions, and test their understanding through
-AI-generated quizzes.
+The application allows students to upload PDF notes, generate AI-powered summaries, ask questions directly from their material, create exam-oriented questions, and test their understanding through AI-generated quizzes.
 
-StudyMate AI combines document processing, OCR, and generative AI
-into a single student-friendly study platform.
-StudyMate AI is an AI-powered study assistant that helps students turn their PDF study material into simple, exam-ready learning resources.
+StudyMate AI combines document processing, OCR, and generative AI into a single student-friendly study platform.
+
 ## 🎯 Why I Built StudyMate AI
 
-Students often spend a significant amount of time converting lengthy
-lecture notes and study material into revision notes and practice
-questions.
+Students often spend a significant amount of time converting lengthy lecture notes and study material into revision notes and practice questions.
 
-I built StudyMate AI to make this process faster and more interactive
-by combining document extraction with AI-powered study tools.
+I built StudyMate AI to make this process faster and more interactive by combining document extraction with AI-powered study tools.
 
-The goal is not to replace studying, but to help students spend more
-time understanding concepts and less time preparing the material.
+The goal is not to replace studying, but to help students spend more time understanding concepts and less time preparing the material.
 
 ## ✨ Features
 
@@ -61,43 +53,8 @@ The application is designed to keep study material processing local rather than 
 
 ## 🚀 Run Locally
 
-
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/sharmavanshikagp-byte/studymate-ai.git
 cd studymate-ai
-
-## 📸 Screenshots
-
-### 🏠 Home
-
-The StudyMate AI dashboard provides access to all major study features.
-
-![StudyMate AI Home](screenshots/home.png)
-
-### ✨ Smart Summary
-
-Converts lengthy study material into structured, simplified, exam-ready notes.
-
-![Smart Summary](screenshots/smart-summary.png)
-
-### 💬 Ask My Notes
-
-Allows students to ask questions directly from their uploaded study material.
-
-![Ask My Notes](screenshots/ask-my-notes.png)
-
-### ❓ Exam Question Generator
-
-Generates university-style questions from uploaded notes.
-
-![Exam Question Generator](screenshots/exam-questions.png)
-
-### 🎯 Quiz Mode
-
-Creates AI-generated MCQs and provides scores, answer reviews, and explanations.
-
-![Quiz Mode](screenshots/quiz-mode.png)
-
-![Quiz Mode](screenshots/quiz-mode.png)
